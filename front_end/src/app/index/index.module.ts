@@ -4,16 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { IndexPageRoutingModule } from './index-routing.module';
+//import { IndexPageRoutingModule } from './index-routing.module';
 
 import { IndexPage } from './index.page';
+import { IndexRouter } from './index.router';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    IndexPageRoutingModule
+//    IndexPageRoutingModule
+    IndexRouter
+
   ],
   declarations: [IndexPage]
 })
