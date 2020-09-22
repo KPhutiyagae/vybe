@@ -1,5 +1,7 @@
 {
-  "name": "Vybe",
-  "integrations": {},
+  "name": "vybe",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
