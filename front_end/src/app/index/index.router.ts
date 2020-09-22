@@ -5,7 +5,27 @@ import { IndexPage } from './index.page';
 const routes: Routes = [
   {
     path: '',
-    component: IndexPage
+    component: IndexPage,
+    children:[
+        {
+            path:'',
+            loadChildren:()=>import("../pages/welcome/welcome.module").then(
+                n =>n.WelcomePageModule
+            )
+        },
+        {
+            path:'login',
+            loadChildren:()=>import("../pages/login/login.module").then(
+                n =>n.LoginPageModule
+            )
+        },
+        {
+            path:'signup',
+            loadChildren:()=>import("../pages/signup/signup.module").then(
+                n =>n.SignupPageModule
+            )
+        }
+    ]
 }];
 
 @NgModule({
